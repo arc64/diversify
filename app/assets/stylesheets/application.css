@@ -47,7 +47,7 @@
 }
 
 form {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 label.filter-by {
@@ -87,4 +87,38 @@ label.filter-by {
 .footer a {
     color: #333;
     text-decoration: underline;
+}
+
+.category {
+    font-family: 'Abril Fatface', cursive;
+    background-color: #b4dced;
+    padding: 50px 0;
+}
+
+.category .columns {
+    padding: 20px 0;
+    border: 10px solid #e6e6e6;
+    text-align: center;
+    margin-right: 16px;
+    background-color: #fff;
+}
+
+.category .row .columns:first-child{
+    margin-left: 50px;
+}
+
+.category .demo {
+    background-color: #3399cc;
+}
+
+.category .row .columns:last-child {
+    margin-right: 50px;
+}
+.category p {
+    margin: 15px 0;
+}
+
+.companies {
+    background-color: #67b8de;
+    padding: 20px 0;
 }
