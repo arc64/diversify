@@ -16,6 +16,7 @@
 
  */
 
+
 .example-enter {
   opacity: 0.01;
   transition: opacity .5s ease-in;
@@ -32,4 +33,20 @@
 
 .example-leave.example-leave-active {
   opacity: 0.01;
+}
+
+.top-bar {
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+input[type="text"].search {
+    background-color: #e6e6e6;
+    height: 40px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+
 }
