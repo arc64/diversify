@@ -5,7 +5,14 @@ var MainComponent = React.createClass({
 
 	componentDidMount: function() {
 		$.get('/companies.json').done(function(data) {
-			this.setState({companies: data});
+			new_companies = data.map(function (company) {
+				co = company
+				co.tags = co.tags.map(function(tag) {
+					return (tag.name);
+				})
+      	return (co);
+      });
+			this.setState({companies: new_companies});
 		}.bind(this));
 		$.get('/tags.json').done(function(data) {
 			tags = data.map(function (tag) {
@@ -16,7 +23,7 @@ var MainComponent = React.createClass({
 	},
 
 	setCurrentTag: function(tag) {
-		this.setState({tag: tag});
+		this.setState({current_tag: tag});
 	},
 
 	render: function() {
@@ -26,7 +33,8 @@ var MainComponent = React.createClass({
 			console.log('first')
 		}
 		else {
-			render_companies = this.state.companies.filter( function(company){
+			render_companies = this.state.companies.filter(function(company) {
+				console.log(this.state.current_tag)
 				return (company.tags.indexOf(this.state.current_tag) > -1)
 			}.bind(this))
 			console.log(render_companies)
