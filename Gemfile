@@ -49,3 +49,7 @@ group :development, :test do
   gem 'habtm_generator'
 end
 
+group :production do
+  gem 'rails_12factor'
+end
+
