@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
-  resources :tags
+  resources :tags do
+    resources :companies
+  end
 
   resources :reviews
 
-  resources :companies
+  resources :companies do
+    resources :tags
+  end
 
   get '/' => 'app#index'
 
