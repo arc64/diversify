@@ -24,6 +24,7 @@ class CompaniesController < ApplicationController
   # POST /companies
   # POST /companies.json
   def create
+    params[:company][:tag_ids] ||= []
     @company = Company.new(company_params)
 
     respond_to do |format|
@@ -40,6 +41,8 @@ class CompaniesController < ApplicationController
   # PATCH/PUT /companies/1
   # PATCH/PUT /companies/1.json
   def update
+    params[:company][:tag_ids] ||= []
+
     respond_to do |format|
       if @company.update(company_params)
         format.html { redirect_to @company, notice: 'Company was successfully updated.' }
@@ -69,6 +72,6 @@ class CompaniesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def company_params
-      params.require(:company).permit(:name, :tags, :address, :latitude, :longitude, :domain, :image_url)
+      params.require(:company).permit(:name, :tags, :address, :latitude, :longitude, :domain, :image_url, :tag_ids => [])
     end
 end
