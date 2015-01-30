@@ -2,7 +2,8 @@ var CompanyComponent = React.createClass({
 	render: function() {
 		return <div className="large-4 columns">
 			<img src={this.props.company.image_url} />
-			<p>{this.props.company.name}</p>
+			<h4>{this.props.company.name}</h4>
+			<p>{this.props.company.domain}</p>
 		</div>
 	}
 });
