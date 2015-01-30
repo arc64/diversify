@@ -1,30 +1,52 @@
 <nav class= data-topbar role="navigation">
     <div class="row">
-    <%= image_tag("Juno-title.png") %>
-
+    <div class="logo">
+        <%= image_tag("Juno-title.png") %>
+    </div>
 
     </div>
     <p class="top-bar">Work Happy, Live Happy</p>
 </nav>
 
-<form>
-  <div class="row">
-    <div class="large-6 columns">
-      <label>Input Label
-        <input class="search" type="text" placeholder="Company, culture search" />
-      </label>
-    </div>
-  </div>
-</form>
+<div class="row">
+    <div>
 
+    </div>
+    <!-- <div>
+        <p>scrappy startup</p>
+        <p>corporate ladder</p>
+        <p>flying solo</p>
+        <p>training sandbox</p>
+        <p>mobile maven</p>
+    </div>
+ -->
+    <form>
+      <div class="row">
+        <div class="large-6 columns">
+            <p>Hey hey, here are your companies in <span class="place">NEW YORK, NY<i class="fa fa-caret-right"></i></span></p>
+        </div>
+        <div class="large-6 columns">
+            <label for="search" class="filter-by">
+                <i class="fa fa-search"></i>
+            </label>
+            <input id="search" placeholder="Search" class="input-lg" tabindex="1">
+
+        </div>
+      </div>
+    </form>
+</div>
 
 <%= react_component('MainComponent') %>
-<footer>
+
+<footer class="footer">
+    <div class="row">
     Built at the <a href="http://www.iwmf.org/our-impact/cracking-the-code/hackathon/">IWMF Cracking the Code Hackathon</a> by
     <a href="https://twitter.com/annabelchurch">@annabelchurch</a>
     <a href="https://twitter.com/marysaints">@marysaints</a>
     <a href="https://twitter.com/yvonneleow">@yvonneleow</a>
     <a href="https://twitter.com/nuncaduermo">@nuncaduermo</a>
     <a href="https://twitter.com/luinteljaya">@luinteljaya</a>
-    <a href="https://twitter.com/connormcewen">@connormcewen</a>. Check out <a href="https://github.com/arc64/diversify">the project</a>
+    <a href="https://twitter.com/connormcewen">@connormcewen</a>. </br> Check out <a href="https://github.com/arc64/diversify">the project</a>
+    </div>
 </footer>
+

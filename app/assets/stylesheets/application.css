@@ -36,17 +36,55 @@
 }
 
 .top-bar {
+    background-color: #67b8de;
     color: #fff;
     text-transform: uppercase;
     text-align: center;
 }
 
-input[type="text"].search {
+.logo {
+    margin-left: -25px;
+}
+
+form {
+    margin-top: 10px;
+}
+
+label.filter-by {
+    font-size: 1.4em;
+    position: absolute;
+    right: 27px;
+    top: 3px;
+    color: #fff;
+}
+
+.place {
+    display: block;
+}
+
+.fa-caret-right {
+    margin-left: 5px;
+    color: blue;
+}
+
+#search {
     background-color: #e6e6e6;
     height: 40px;
     padding: 10px 16px;
     font-size: 18px;
     line-height: 1.3333333;
     border-radius: 6px;
+    width: 100%;
+}
 
+.footer {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 11px;
+}
+
+.footer a {
+    color: #333;
+    text-decoration: underline;
 }
