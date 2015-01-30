@@ -14,5 +14,5 @@ development:
   encoding: unicode
   database: diversify_development
   pool: 5
-  username: cmcewen
+  username: BellaDolce
   password:

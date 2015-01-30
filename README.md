@@ -13,3 +13,8 @@ bundle install
 
 # Run
 rails server
+
+
+
+#
+rake db:migrate
