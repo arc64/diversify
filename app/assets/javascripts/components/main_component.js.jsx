@@ -1,3 +1,5 @@
+var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
+
 var MainComponent = React.createClass({
 	getInitialState: function() {
 		return({companies: [], current_tag: null, possible_tags: []})
@@ -29,20 +31,15 @@ var MainComponent = React.createClass({
 	render: function() {
 		if (this.state.current_tag == null) {
 			render_companies = this.state.companies;
-			console.log(render_companies)
-			console.log('first')
 		}
 		else {
 			render_companies = this.state.companies.filter(function(company) {
-				console.log(this.state.current_tag)
 				return (company.tags.indexOf(this.state.current_tag) > -1)
 			}.bind(this))
-			console.log(render_companies)
-			console.log('second')
 		}
-		var companyNodes = render_companies.map(function (company) {
+		var companyNodes = $.map(render_companies, function (company, index) {
       return (
-        <CompanyComponent company={company} />
+        <CompanyComponent company={company} key={"company".concat(index)}/>
       );
     }.bind(this));
     return <div className="row">
@@ -50,7 +47,9 @@ var MainComponent = React.createClass({
     		<TagSelector tags={this.state.possible_tags} setTag={this.setCurrentTag}/>
     	</div>
     	<div className="row">
-    		{companyNodes}
+    		<ReactCSSTransitionGroup transitionName="example">
+    			{companyNodes}
+    		</ReactCSSTransitionGroup>
     	</div>
     </div>
 	}
