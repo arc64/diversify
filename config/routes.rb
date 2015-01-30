@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
-  resources :tags
+  resources :tags do
+    resources :companies
+  end
 
   resources :reviews
 
-  resources :companies
+  resources :companies do
+    resources :tags
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

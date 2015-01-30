@@ -5,4 +5,6 @@ class Company < ActiveRecord::Base
 	# string :address
 	# float :latitude
 	# float :longitude
+	# string :domain
+	# string :image_url
 end
